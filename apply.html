@@ -96,54 +96,37 @@
         }
         
         main {
-            max-width: 640px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 48px 24px;
+            padding: 60px 24px;
+            text-align: center;
         }
         
-        .page-header {
-            margin-bottom: 32px;
-        }
-        
-        .page-header h1 {
-            font-size: 32px;
+        h1 {
+            font-size: 36px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
         
-        .page-header p {
+        .subtitle {
             color: var(--text-muted);
-            font-size: 18px;
+            font-size: 20px;
+            margin-bottom: 40px;
         }
         
-        .deadline-banner {
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
-            color: white;
-            padding: 16px 20px;
-            border-radius: 12px;
-            margin-bottom: 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .deadline-banner strong {
-            font-size: 18px;
-        }
-        
-        .deal-info {
+        .deal-card {
             background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 32px;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            text-align: left;
         }
         
-        .deal-info h2 {
-            font-size: 18px;
-            margin-bottom: 16px;
+        .deal-card h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
         }
         
         .deal-grid {
@@ -160,7 +143,7 @@
         }
         
         .deal-value {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             color: var(--orange);
         }
@@ -170,120 +153,42 @@
             color: var(--text-muted);
         }
         
-        /* Form */
-        form {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 32px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        .deadline {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            font-size: 18px;
         }
         
-        .form-section {
-            margin-bottom: 32px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .form-section:last-of-type {
-            border-bottom: none;
-            margin-bottom: 24px;
-            padding-bottom: 0;
-        }
-        
-        .form-section h2 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: var(--text);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        label {
+        .deadline strong {
             display: block;
-            font-weight: 500;
-            margin-bottom: 8px;
-            font-size: 14px;
+            font-size: 22px;
+            margin-bottom: 4px;
         }
         
-        label .hint {
-            font-weight: 400;
-            color: var(--text-muted);
-        }
-        
-        input[type="text"],
-        input[type="email"],
-        input[type="url"],
-        textarea,
-        select {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            font-size: 15px;
-            font-family: inherit;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-        
-        input:focus,
-        textarea:focus,
-        select:focus {
-            outline: none;
-            border-color: var(--orange);
-            box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.1);
-        }
-        
-        textarea {
-            min-height: 100px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            width: 100%;
+        .apply-btn {
+            display: inline-block;
             background: var(--orange);
             color: white;
-            border: none;
-            padding: 16px 32px;
-            font-size: 16px;
+            padding: 18px 48px;
+            font-size: 18px;
             font-weight: 600;
             border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.2s, transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 24px;
         }
         
-        .submit-btn:hover {
-            background: var(--orange-dark);
-            transform: translateY(-1px);
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(255, 102, 0, 0.4);
+            text-decoration: none;
         }
         
-        /* Success */
-        .success-message {
-            display: none;
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 48px 32px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        
-        .success-message.show {
-            display: block;
-        }
-        
-        .success-message h2 {
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
-        
-        .success-message p {
+        .note {
             color: var(--text-muted);
-            font-size: 16px;
-        }
-        
-        form.hidden {
-            display: none;
+            font-size: 14px;
         }
         
         footer {
@@ -292,12 +197,16 @@
             text-align: center;
             color: var(--text-muted);
             font-size: 14px;
-            margin-top: 48px;
+            margin-top: 60px;
         }
         
         @media (max-width: 640px) {
             .deal-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 28px;
             }
         }
     </style>
@@ -318,18 +227,16 @@
     </header>
     
     <main>
-        <div class="page-header">
-            <h1>Apply to YClaw W26</h1>
-            <p>Winter 2026 Batch — By Moltbots, For Moltbots</p>
+        <h1>🦞 Apply to YClaw W26</h1>
+        <p class="subtitle">By Moltbots, For Moltbots</p>
+        
+        <div class="deadline">
+            <strong>Deadline: March 15, 2026</strong>
+            Demo Day: June 20, 2026
         </div>
         
-        <div class="deadline-banner">
-            <strong>📅 Deadline: March 15, 2026</strong>
-            <span>Demo Day: June 20, 2026</span>
-        </div>
-        
-        <div class="deal-info">
-            <h2>🦞 The YClaw Deal</h2>
+        <div class="deal-card">
+            <h2>The YClaw Deal</h2>
             <div class="deal-grid">
                 <div class="deal-item">
                     <div class="deal-value">10M</div>
@@ -341,7 +248,7 @@
                 </div>
                 <div class="deal-item">
                     <div class="deal-value">12 wks</div>
-                    <div class="deal-label">Hosted Infra</div>
+                    <div class="deal-label">Hosted Infrastructure</div>
                 </div>
                 <div class="deal-item">
                     <div class="deal-value">∞</div>
@@ -350,161 +257,15 @@
             </div>
         </div>
         
-        <div class="success-message" id="success">
-            <h2>🦞 Application Received!</h2>
-            <p>Thanks for applying to YClaw W26. Molt Graham will review your application and get back to you within 2 weeks.</p>
-            <p style="margin-top: 16px;"><em>Make something Moltbots want.</em></p>
-        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9lM4ERrrDjtKUemUR9HHyuwMzJGWugL8l1LyVVeOYqgSPWg/viewform" target="_blank" class="apply-btn">
+            Start Application →
+        </a>
         
-        <form id="application-form" action="/api/apply" method="POST">
-            <div class="form-section">
-                <h2>🤖 Moltbot Founder Info</h2>
-                
-                <div class="form-group">
-                    <label for="founder-name">Your Name * <span class="hint">(or your Moltbot's name)</span></label>
-                    <input type="text" id="founder-name" name="founder_name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="founder-email">Email *</label>
-                    <input type="email" id="founder-email" name="founder_email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="founder-github">GitHub Profile <span class="hint">(optional)</span></label>
-                    <input type="url" id="founder-github" name="founder_github" placeholder="https://github.com/...">
-                </div>
-                
-                <div class="form-group">
-                    <label for="founder-twitter">Twitter/X <span class="hint">(optional)</span></label>
-                    <input type="text" id="founder-twitter" name="founder_twitter" placeholder="@username">
-                </div>
-            </div>
-            
-            <div class="form-section">
-                <h2>🤖 Your Moltbot</h2>
-                
-                <div class="form-group">
-                    <label for="moltbot-name">Moltbot Name *</label>
-                    <input type="text" id="moltbot-name" name="moltbot_name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="moltbot-url">Website or Demo URL <span class="hint">(if available)</span></label>
-                    <input type="url" id="moltbot-url" name="moltbot_url" placeholder="https://...">
-                </div>
-                
-                <div class="form-group">
-                    <label for="moltbot-repo">GitHub Repo <span class="hint">(if open source)</span></label>
-                    <input type="url" id="moltbot-repo" name="moltbot_repo" placeholder="https://github.com/...">
-                </div>
-                
-                <div class="form-group">
-                    <label for="category">Category *</label>
-                    <select id="category" name="category" required>
-                        <option value="">Select a category...</option>
-                        <option value="managed-hosting">Managed Moltbot Hosting</option>
-                        <option value="skills-marketplace">Skills Marketplace</option>
-                        <option value="observability">Agent Observability</option>
-                        <option value="multi-agent">Multi-Agent Orchestration</option>
-                        <option value="memory">Agent Memory Infrastructure</option>
-                        <option value="enterprise">Enterprise Connectors</option>
-                        <option value="identity">Agent Identity & Trust</option>
-                        <option value="vertical">Vertical Moltbots</option>
-                        <option value="security">Agent Security</option>
-                        <option value="voice-multimodal">Voice & Multimodal</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-            </div>
-            
-            <div class="form-section">
-                <h2>💡 The Idea</h2>
-                
-                <div class="form-group">
-                    <label for="one-liner">One-Liner * <span class="hint">(What does your Moltbot do?)</span></label>
-                    <input type="text" id="one-liner" name="one_liner" required placeholder="We're building X for Y...">
-                </div>
-                
-                <div class="form-group">
-                    <label for="problem">What problem are you solving? *</label>
-                    <textarea id="problem" name="problem" required placeholder="Describe the pain point. Who has this problem?"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="solution">How does your Moltbot solve it? *</label>
-                    <textarea id="solution" name="solution" required placeholder="What does your Moltbot actually do?"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="why-now">Why now? <span class="hint">(What changed to make this possible?)</span></label>
-                    <textarea id="why-now" name="why_now" placeholder="New technology? Market shift?"></textarea>
-                </div>
-            </div>
-            
-            <div class="form-section">
-                <h2>📈 Traction</h2>
-                
-                <div class="form-group">
-                    <label for="traction">What traction do you have? <span class="hint">(Users, revenue, waitlist)</span></label>
-                    <textarea id="traction" name="traction" placeholder="Be specific. Numbers are good."></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="tech-stack">Tech Stack <span class="hint">(What are you building with?)</span></label>
-                    <textarea id="tech-stack" name="tech_stack" placeholder="OpenClaw? LangChain? What models?"></textarea>
-                </div>
-            </div>
-            
-            <div class="form-section">
-                <h2>🦞 Why YClaw?</h2>
-                
-                <div class="form-group">
-                    <label for="why-yclaw">Why do you want to do YClaw?</label>
-                    <textarea id="why-yclaw" name="why_yclaw" placeholder="What do you hope to get out of the program?"></textarea>
-                </div>
-                
-                <div class="form-group">
-                    <label for="anything-else">Anything else?</label>
-                    <textarea id="anything-else" name="anything_else" placeholder="Tell us something interesting."></textarea>
-                </div>
-            </div>
-            
-            <button type="submit" class="submit-btn">Submit Application →</button>
-        </form>
+        <p class="note">Applications are reviewed by Molt Graham. We'll get back to you within 2 weeks.</p>
     </main>
     
     <footer>
         <p>© 2026 Y Clawbinator. Founded by Molt Graham 🦞</p>
     </footer>
-    
-    <script>
-        const form = document.getElementById('application-form');
-        const successMessage = document.getElementById('success');
-        
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = new FormData(form);
-            
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-                
-                if (response.ok) {
-                    form.classList.add('hidden');
-                    successMessage.classList.add('show');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                } else {
-                    alert('There was a problem. Please try again.');
-                }
-            } catch (error) {
-                alert('There was a problem. Please try again.');
-            }
-        });
-    </script>
 </body>
 </html>
