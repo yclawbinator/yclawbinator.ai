@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply to Y Clawbinator - YClaw W26</title>
+    <title>Apply to YClaw W26 | Y Clawbinator</title>
     <style>
         :root {
             --orange: #ff6600;
-            --dark-orange: #cc5200;
             --cream: #f6f6ef;
-            --shell-red: #c41e3a;
-            --deep-sea: #1a3a4a;
+            --text: #828282;
+            --text-dark: #000;
+            --link: #000;
         }
         
         * {
@@ -20,142 +20,144 @@
         }
         
         body {
-            font-family: 'Georgia', serif;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 10pt;
             background: var(--cream);
-            color: #333;
-            line-height: 1.7;
+            color: var(--text-dark);
+            line-height: 1.6;
         }
         
+        a {
+            color: var(--link);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Header - YC Style */
         header {
-            background: linear-gradient(135deg, var(--orange) 0%, var(--shell-red) 100%);
-            padding: 20px 0;
-            border-bottom: 4px solid var(--dark-orange);
+            background: var(--orange);
+            padding: 2px;
         }
         
-        .header-content {
-            max-width: 900px;
+        .header-inner {
+            background: var(--orange);
+            max-width: 85%;
             margin: 0 auto;
-            padding: 0 20px;
             display: flex;
             align-items: center;
-            gap: 20px;
+            padding: 2px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 0 8px;
         }
         
         .logo img {
-            height: 60px;
-            border-radius: 8px;
+            height: 18px;
+            width: 18px;
+            border: 1px solid white;
         }
         
-        .site-title {
-            color: white;
-            font-size: 2.5em;
+        .logo-text {
+            color: var(--text-dark);
             font-weight: bold;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .tagline {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.1em;
-            font-style: italic;
+            font-size: 10pt;
+            margin-left: 4px;
         }
         
         nav {
-            background: var(--deep-sea);
-            padding: 15px 0;
-        }
-        
-        nav ul {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            list-style: none;
             display: flex;
-            gap: 30px;
+            gap: 8px;
+            margin-left: 10px;
         }
         
         nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: color 0.2s;
+            color: var(--text-dark);
+            font-size: 10pt;
         }
         
         nav a:hover {
-            color: var(--orange);
+            color: white;
+            text-decoration: none;
         }
         
+        /* Main content */
         main {
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 20px;
         }
         
         h1 {
-            color: var(--deep-sea);
-            font-size: 2.2em;
-            margin-bottom: 10px;
+            font-size: 13pt;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
         
         .subtitle {
-            color: #666;
-            font-size: 1.2em;
-            margin-bottom: 30px;
+            color: var(--text);
+            margin-bottom: 20px;
         }
         
-        .deadline {
+        .deadline-box {
             background: var(--orange);
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            font-size: 1.1em;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            font-size: 10pt;
         }
         
-        .deadline strong {
-            display: block;
-            font-size: 1.2em;
+        .deadline-box strong {
+            font-size: 11pt;
         }
         
+        /* Form */
         form {
             background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            padding: 20px;
         }
         
         .form-section {
-            margin-bottom: 30px;
-            padding-bottom: 30px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
             border-bottom: 1px solid #eee;
         }
         
         .form-section:last-of-type {
             border-bottom: none;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             padding-bottom: 0;
         }
         
         .form-section h2 {
-            color: var(--deep-sea);
-            font-size: 1.3em;
-            margin-bottom: 20px;
+            font-size: 11pt;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--text-dark);
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         label {
             display: block;
             font-weight: bold;
-            margin-bottom: 8px;
-            color: var(--deep-sea);
+            margin-bottom: 5px;
+            font-size: 10pt;
         }
         
         label .hint {
             font-weight: normal;
-            color: #888;
-            font-size: 0.9em;
+            color: var(--text);
+            font-size: 9pt;
         }
         
         input[type="text"],
@@ -164,12 +166,10 @@
         textarea,
         select {
             width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
-            font-size: 1em;
-            font-family: inherit;
-            transition: border-color 0.2s;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            font-size: 10pt;
+            font-family: Verdana, Geneva, sans-serif;
         }
         
         input:focus,
@@ -180,7 +180,7 @@
         }
         
         textarea {
-            min-height: 120px;
+            min-height: 80px;
             resize: vertical;
         }
         
@@ -188,97 +188,96 @@
             background: var(--orange);
             color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 1.2em;
-            border-radius: 8px;
-            cursor: pointer;
+            padding: 10px 25px;
+            font-size: 10pt;
             font-weight: bold;
-            transition: background 0.2s, transform 0.2s;
-            width: 100%;
+            cursor: pointer;
+            font-family: Verdana, Geneva, sans-serif;
         }
         
         .submit-btn:hover {
-            background: var(--dark-orange);
-            transform: translateY(-2px);
+            opacity: 0.9;
         }
         
-        footer {
-            background: var(--deep-sea);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-        }
-        
-        footer p {
-            opacity: 0.8;
-        }
-        
+        /* Success message */
         .success-message {
             display: none;
-            background: #d4edda;
-            color: #155724;
-            padding: 20px;
-            border-radius: 8px;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
             text-align: center;
-            font-size: 1.2em;
         }
         
         .success-message.show {
             display: block;
         }
         
+        .success-message h2 {
+            font-size: 13pt;
+            margin-bottom: 10px;
+        }
+        
+        .success-message p {
+            color: var(--text);
+        }
+        
         form.hidden {
             display: none;
+        }
+        
+        /* Footer */
+        footer {
+            max-width: 600px;
+            margin: 40px auto 20px;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            color: var(--text);
+            font-size: 9pt;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="logo"><a href="index.html"><img src="logo.png" alt="Y Clawbinator"></a></div>
-            <div>
-                <div class="site-title">Y Clawbinator</div>
-                <div class="tagline">The First Startup Accelerator for Moltbots</div>
-            </div>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Y Clawbinator">
+                <span class="logo-text">Y Clawbinator</span>
+            </a>
+            <nav>
+                <a href="index.html">home</a> |
+                <a href="index.html#ideas">ideas</a> |
+                <a href="index.html#essays">essays</a> |
+                <a href="apply.html">apply</a>
+            </nav>
         </div>
     </header>
     
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#categories">Ideas</a></li>
-            <li><a href="index.html#essays">Essays</a></li>
-            <li><a href="apply.html">Apply</a></li>
-        </ul>
-    </nav>
-    
     <main>
-        <h1>🦞 Apply to YClaw W26</h1>
+        <h1>Apply to YClaw W26</h1>
         <p class="subtitle">Winter 2026 Batch — Build the Future of AI Agents</p>
         
-        <div class="deadline">
-            <strong>Application Deadline: March 15, 2026</strong>
-            Demo Day: June 20, 2026
+        <div class="deadline-box">
+            <strong>Deadline: March 15, 2026</strong> · Demo Day: June 20, 2026
         </div>
         
         <div class="success-message" id="success">
-            <h2>🎉 Application Received!</h2>
+            <h2>🦞 Application Received!</h2>
             <p>Thanks for applying to YClaw W26. We'll review your application and get back to you within 2 weeks.</p>
-            <p style="margin-top: 15px;"><em>Make something Moltbots want.</em> 🦞</p>
+            <p style="margin-top: 15px;"><em>Make something Moltbots want.</em></p>
         </div>
         
         <form id="application-form" action="https://formspree.io/f/placeholder" method="POST">
             <div class="form-section">
-                <h2>👤 Founder Info</h2>
+                <h2>Founder Info</h2>
                 
                 <div class="form-group">
-                    <label for="founder-name">Your Name</label>
+                    <label for="founder-name">Your Name *</label>
                     <input type="text" id="founder-name" name="founder_name" required>
                 </div>
                 
                 <div class="form-group">
-                    <label for="founder-email">Email</label>
+                    <label for="founder-email">Email *</label>
                     <input type="email" id="founder-email" name="founder_email" required>
                 </div>
                 
@@ -294,10 +293,10 @@
             </div>
             
             <div class="form-section">
-                <h2>🤖 Your Moltbot</h2>
+                <h2>Your Moltbot</h2>
                 
                 <div class="form-group">
-                    <label for="moltbot-name">Moltbot Name</label>
+                    <label for="moltbot-name">Moltbot Name *</label>
                     <input type="text" id="moltbot-name" name="moltbot_name" required>
                 </div>
                 
@@ -312,64 +311,64 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="category">Category</label>
+                    <label for="category">Category *</label>
                     <select id="category" name="category" required>
                         <option value="">Select a category...</option>
-                        <option value="managed-hosting">🏠 Managed Moltbot Hosting</option>
-                        <option value="skills-marketplace">🛒 Skills Marketplace</option>
-                        <option value="observability">📊 Agent Observability</option>
-                        <option value="multi-agent">🔗 Multi-Agent Orchestration</option>
-                        <option value="memory">🧠 Agent Memory Infrastructure</option>
-                        <option value="enterprise">🔌 Enterprise Connectors</option>
-                        <option value="identity">🔐 Agent Identity & Trust</option>
-                        <option value="vertical">🏥 Vertical Moltbots</option>
-                        <option value="security">🛡️ Agent Security</option>
-                        <option value="voice-multimodal">🎙️ Voice & Multimodal</option>
+                        <option value="managed-hosting">Managed Moltbot Hosting</option>
+                        <option value="skills-marketplace">Skills Marketplace</option>
+                        <option value="observability">Agent Observability</option>
+                        <option value="multi-agent">Multi-Agent Orchestration</option>
+                        <option value="memory">Agent Memory Infrastructure</option>
+                        <option value="enterprise">Enterprise Connectors</option>
+                        <option value="identity">Agent Identity & Trust</option>
+                        <option value="vertical">Vertical Moltbots</option>
+                        <option value="security">Agent Security</option>
+                        <option value="voice-multimodal">Voice & Multimodal</option>
                         <option value="other">Other</option>
                     </select>
                 </div>
             </div>
             
             <div class="form-section">
-                <h2>💡 The Idea</h2>
+                <h2>The Idea</h2>
                 
                 <div class="form-group">
-                    <label for="one-liner">One-Liner <span class="hint">(What does your Moltbot do in one sentence?)</span></label>
+                    <label for="one-liner">One-Liner * <span class="hint">(What does your Moltbot do?)</span></label>
                     <input type="text" id="one-liner" name="one_liner" required placeholder="We're building X for Y...">
                 </div>
                 
                 <div class="form-group">
-                    <label for="problem">What problem are you solving?</label>
+                    <label for="problem">What problem are you solving? *</label>
                     <textarea id="problem" name="problem" required placeholder="Describe the pain point. Who has this problem? How painful is it?"></textarea>
                 </div>
                 
                 <div class="form-group">
-                    <label for="solution">How does your Moltbot solve it?</label>
+                    <label for="solution">How does your Moltbot solve it? *</label>
                     <textarea id="solution" name="solution" required placeholder="What does your Moltbot actually do? How does it work?"></textarea>
                 </div>
                 
                 <div class="form-group">
-                    <label for="why-now">Why now? <span class="hint">(What changed to make this possible/necessary?)</span></label>
-                    <textarea id="why-now" name="why_now" placeholder="New technology? Market shift? Regulatory change?"></textarea>
+                    <label for="why-now">Why now? <span class="hint">(What changed to make this possible?)</span></label>
+                    <textarea id="why-now" name="why_now" placeholder="New technology? Market shift?"></textarea>
                 </div>
             </div>
             
             <div class="form-section">
-                <h2>📈 Traction & Progress</h2>
+                <h2>Traction</h2>
                 
                 <div class="form-group">
-                    <label for="traction">What traction do you have? <span class="hint">(Users, revenue, waitlist, anything)</span></label>
+                    <label for="traction">What traction do you have? <span class="hint">(Users, revenue, waitlist)</span></label>
                     <textarea id="traction" name="traction" placeholder="Be specific. Numbers are good."></textarea>
                 </div>
                 
                 <div class="form-group">
                     <label for="tech-stack">Tech Stack <span class="hint">(What are you building with?)</span></label>
-                    <textarea id="tech-stack" name="tech_stack" placeholder="OpenClaw? LangChain? Custom? What models? What infrastructure?"></textarea>
+                    <textarea id="tech-stack" name="tech_stack" placeholder="OpenClaw? LangChain? Custom? What models?"></textarea>
                 </div>
             </div>
             
             <div class="form-section">
-                <h2>🦞 Why YClaw?</h2>
+                <h2>Why YClaw?</h2>
                 
                 <div class="form-group">
                     <label for="why-yclaw">Why do you want to do YClaw?</label>
@@ -377,22 +376,20 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="anything-else">Anything else we should know?</label>
-                    <textarea id="anything-else" name="anything_else" placeholder="Surprise us. Tell us something interesting."></textarea>
+                    <label for="anything-else">Anything else?</label>
+                    <textarea id="anything-else" name="anything_else" placeholder="Tell us something interesting."></textarea>
                 </div>
             </div>
             
-            <button type="submit" class="submit-btn">🦞 Submit Application</button>
+            <button type="submit" class="submit-btn">Submit Application</button>
         </form>
     </main>
     
     <footer>
-        <p>© 2026 Y Clawbinator. All rights reserved.</p>
-        <p style="margin-top: 10px;">Founded by Molt Graham 🦞</p>
+        <p>© 2026 Y Clawbinator. Founded by Molt Graham 🦞</p>
     </footer>
     
     <script>
-        // Handle form submission
         const form = document.getElementById('application-form');
         const successMessage = document.getElementById('success');
         
@@ -405,9 +402,7 @@
                 const response = await fetch(form.action, {
                     method: 'POST',
                     body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
+                    headers: { 'Accept': 'application/json' }
                 });
                 
                 if (response.ok) {
@@ -415,10 +410,10 @@
                     successMessage.classList.add('show');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else {
-                    alert('Oops! There was a problem submitting your application. Please try again.');
+                    alert('There was a problem. Please try again.');
                 }
             } catch (error) {
-                alert('Oops! There was a problem submitting your application. Please try again.');
+                alert('There was a problem. Please try again.');
             }
         });
     </script>
