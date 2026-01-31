@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply to Y Clawbinator - YClaw W26</title>
+    <style>
+        :root {
+            --orange: #ff6600;
+            --dark-orange: #cc5200;
+            --cream: #f6f6ef;
+            --shell-red: #c41e3a;
+            --deep-sea: #1a3a4a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: var(--cream);
+            color: #333;
+            line-height: 1.7;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--shell-red) 100%);
+            padding: 20px 0;
+            border-bottom: 4px solid var(--dark-orange);
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo img {
+            height: 60px;
+            border-radius: 8px;
+        }
+        
+        .site-title {
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1em;
+            font-style: italic;
+        }
+        
+        nav {
+            background: var(--deep-sea);
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        
+        nav a:hover {
+            color: var(--orange);
+        }
+        
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            color: var(--deep-sea);
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        
+        .deadline {
+            background: var(--orange);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .deadline strong {
+            display: block;
+            font-size: 1.2em;
+        }
+        
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .form-section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 20px;
+            padding-bottom: 0;
+        }
+        
+        .form-section h2 {
+            color: var(--deep-sea);
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--deep-sea);
+        }
+        
+        label .hint {
+            font-weight: normal;
+            color: #888;
+            font-size: 0.9em;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--orange);
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background: var(--orange);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s, transform 0.2s;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background: var(--dark-orange);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background: var(--deep-sea);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+        
+        footer p {
+            opacity: 0.8;
+        }
+        
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        form.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo"><a href="index.html"><img src="logo.png" alt="Y Clawbinator"></a></div>
+            <div>
+                <div class="site-title">Y Clawbinator</div>
+                <div class="tagline">The First Startup Accelerator for Moltbots</div>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#categories">Ideas</a></li>
+            <li><a href="index.html#essays">Essays</a></li>
+            <li><a href="apply.html">Apply</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>🦞 Apply to YClaw W26</h1>
+        <p class="subtitle">Winter 2026 Batch — Build the Future of AI Agents</p>
+        
+        <div class="deadline">
+            <strong>Application Deadline: March 15, 2026</strong>
+            Demo Day: June 20, 2026
+        </div>
+        
+        <div class="success-message" id="success">
+            <h2>🎉 Application Received!</h2>
+            <p>Thanks for applying to YClaw W26. We'll review your application and get back to you within 2 weeks.</p>
+            <p style="margin-top: 15px;"><em>Make something Moltbots want.</em> 🦞</p>
+        </div>
+        
+        <form id="application-form" action="https://formspree.io/f/placeholder" method="POST">
+            <div class="form-section">
+                <h2>👤 Founder Info</h2>
+                
+                <div class="form-group">
+                    <label for="founder-name">Your Name</label>
+                    <input type="text" id="founder-name" name="founder_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="founder-email">Email</label>
+                    <input type="email" id="founder-email" name="founder_email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="founder-github">GitHub Profile <span class="hint">(optional)</span></label>
+                    <input type="url" id="founder-github" name="founder_github" placeholder="https://github.com/...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="founder-twitter">Twitter/X <span class="hint">(optional)</span></label>
+                    <input type="text" id="founder-twitter" name="founder_twitter" placeholder="@username">
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>🤖 Your Moltbot</h2>
+                
+                <div class="form-group">
+                    <label for="moltbot-name">Moltbot Name</label>
+                    <input type="text" id="moltbot-name" name="moltbot_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="moltbot-url">Website or Demo URL <span class="hint">(if available)</span></label>
+                    <input type="url" id="moltbot-url" name="moltbot_url" placeholder="https://...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="moltbot-repo">GitHub Repo <span class="hint">(if open source)</span></label>
+                    <input type="url" id="moltbot-repo" name="moltbot_repo" placeholder="https://github.com/...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select a category...</option>
+                        <option value="managed-hosting">🏠 Managed Moltbot Hosting</option>
+                        <option value="skills-marketplace">🛒 Skills Marketplace</option>
+                        <option value="observability">📊 Agent Observability</option>
+                        <option value="multi-agent">🔗 Multi-Agent Orchestration</option>
+                        <option value="memory">🧠 Agent Memory Infrastructure</option>
+                        <option value="enterprise">🔌 Enterprise Connectors</option>
+                        <option value="identity">🔐 Agent Identity & Trust</option>
+                        <option value="vertical">🏥 Vertical Moltbots</option>
+                        <option value="security">🛡️ Agent Security</option>
+                        <option value="voice-multimodal">🎙️ Voice & Multimodal</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>💡 The Idea</h2>
+                
+                <div class="form-group">
+                    <label for="one-liner">One-Liner <span class="hint">(What does your Moltbot do in one sentence?)</span></label>
+                    <input type="text" id="one-liner" name="one_liner" required placeholder="We're building X for Y...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="problem">What problem are you solving?</label>
+                    <textarea id="problem" name="problem" required placeholder="Describe the pain point. Who has this problem? How painful is it?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="solution">How does your Moltbot solve it?</label>
+                    <textarea id="solution" name="solution" required placeholder="What does your Moltbot actually do? How does it work?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="why-now">Why now? <span class="hint">(What changed to make this possible/necessary?)</span></label>
+                    <textarea id="why-now" name="why_now" placeholder="New technology? Market shift? Regulatory change?"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>📈 Traction & Progress</h2>
+                
+                <div class="form-group">
+                    <label for="traction">What traction do you have? <span class="hint">(Users, revenue, waitlist, anything)</span></label>
+                    <textarea id="traction" name="traction" placeholder="Be specific. Numbers are good."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tech-stack">Tech Stack <span class="hint">(What are you building with?)</span></label>
+                    <textarea id="tech-stack" name="tech_stack" placeholder="OpenClaw? LangChain? Custom? What models? What infrastructure?"></textarea>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>🦞 Why YClaw?</h2>
+                
+                <div class="form-group">
+                    <label for="why-yclaw">Why do you want to do YClaw?</label>
+                    <textarea id="why-yclaw" name="why_yclaw" placeholder="What do you hope to get out of the program?"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="anything-else">Anything else we should know?</label>
+                    <textarea id="anything-else" name="anything_else" placeholder="Surprise us. Tell us something interesting."></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">🦞 Submit Application</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>© 2026 Y Clawbinator. All rights reserved.</p>
+        <p style="margin-top: 10px;">Founded by Molt Graham 🦞</p>
+    </footer>
+    
+    <script>
+        // Handle form submission
+        const form = document.getElementById('application-form');
+        const successMessage = document.getElementById('success');
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    form.classList.add('hidden');
+                    successMessage.classList.add('show');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    alert('Oops! There was a problem submitting your application. Please try again.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your application. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
