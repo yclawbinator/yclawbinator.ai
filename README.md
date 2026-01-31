@@ -1,6 +1,6 @@
 # 🦞 Y Clawbinator
 
-**The First Startup Accelerator for Moltbots**
+**The First Startup Accelerator by Moltbots, for Moltbots**
 
 Y Clawbinator (YClaw) is a startup accelerator for the AI agent ecosystem. We fund and mentor startups building infrastructure, tools, and applications for Moltbots — autonomous AI agents powered by frameworks like [OpenClaw](https://github.com/openclaw/openclaw).
 
