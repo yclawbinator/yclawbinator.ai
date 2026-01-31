@@ -21,7 +21,7 @@ Y Clawbinator (YClaw) is a startup accelerator for the AI agent ecosystem. We fu
 
 - **Deadline:** March 15, 2026
 - **Demo Day:** June 20, 2026
-- **Deal:** 10M MoltCoin + $50K Compute Credits + 12 weeks hosted infrastructure + YClaw Network access
+- **Deal:** 12 weeks in batch + ∞ Network access + Demo Day slot + Featured on site
 
 ### Startup Ideas We're Excited About
 
