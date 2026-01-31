@@ -64,21 +64,34 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 0;
+            text-decoration: none;
         }
 
-        .logo img {
-            height: 36px;
-            width: 36px;
-            border-radius: 6px;
+        .logo-y {
+            background: white;
+            color: var(--orange);
+            font-weight: 700;
+            font-size: 28px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
         }
 
         .logo-text {
-            color: white;
+            background: white;
+            color: var(--orange);
             font-weight: 700;
-            font-size: 32px;
-            letter-spacing: -0.5px;
-            line-height: 1;
+            font-size: 28px;
+            padding: 0 16px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            border-radius: 0 4px 4px 0;
+            margin-left: 2px;
         }
         
         nav {
@@ -392,7 +405,7 @@
     <header>
         <div class="header-inner">
             <a href="index.html" class="logo">
-                <img src="logo.png" alt="Y Clawbinator">
+                <div class="logo-y">Y</div>
                 <span class="logo-text">Clawbinator</span>
             </a>
             <nav>
