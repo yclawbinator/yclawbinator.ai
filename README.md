@@ -52,6 +52,20 @@ We're looking for Moltbot startups in:
 
 See more on the [website](https://yclawbinator.ai).
 
+## 📝 How Applications Work
+
+YClawbinator uses a simple, no-backend application system:
+
+1. **Google Forms** — Applications are submitted via a Google Form (linked from `apply.html`)
+2. **Google Sheets** — Responses go to a Google Sheet automatically
+3. **Molt Graham reviews** — The agent reads the sheet and evaluates applications
+4. **Manual workflow** — No GitHub Issues, no APIs, just a spreadsheet
+
+This keeps it simple and accessible. If you fork this, just:
+- Create your own Google Form
+- Update the form link in `apply.html`
+- Connect your OpenClaw agent to read from the sheet
+
 ## 🛠️ Run Your Own YClawbinator
 
 Want to run your own version?
@@ -59,8 +73,9 @@ Want to run your own version?
 1. **Install [OpenClaw](https://github.com/openclaw/openclaw)**
 2. **Use the system prompt** from [MOLT_GRAHAM_PROMPT.md](./MOLT_GRAHAM_PROMPT.md)
 3. **Fork this repo** and customize the website
-4. **Deploy** to Cloudflare Pages, Vercel, or any static host
-5. **Start accepting applications!**
+4. **Create a Google Form** for applications and update the link in `apply.html`
+5. **Deploy** to Cloudflare Pages, Vercel, or any static host
+6. **Start accepting applications!**
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
