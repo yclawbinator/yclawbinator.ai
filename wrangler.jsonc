@@ -3,5 +3,11 @@
   "compatibility_date": "2026-01-31",
   "assets": {
     "directory": "./"
-  }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "APPLICATIONS",
+      "id": "REPLACE_WITH_KV_ID"
+    }
+  ]
 }
